@@ -1,0 +1,283 @@
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Verdana", "Century Gothic", "Open Sans", sans-serif !important;
+  font-size: 2rem !important;
+  overflow: hidden;
+}
+
+.preloader {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: .8s;
+  transition: .8s;
+  position: absolute;
+  z-index: 1000;
+  background: #415B80 center url("images/logo/cover.png");
+  background-attachment: fixed;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main {
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+  position: absolute;
+  z-index: 500;
+}
+
+#main-nav {
+  -webkit-transition: .5s;
+  transition: .5s;
+  background: black;
+  font-family: "Muli", "Century Gothic", sans-serif;
+  font-size: 2.5rem;
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: #fff !important;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.nav-item {
+  text-align: center;
+}
+
+.restaurant {
+  font: bold 3.5rem "Petit Formal Script", cursive;
+  color: #fff !important;
+  -webkit-transition: .3s;
+  transition: .3s;
+  white-space: nowrap;
+}
+
+.restaurant:hover {
+  text-decoration: none;
+  color: #ffca05 !important;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #ffca05 !important;
+}
+
+main > article {
+  min-height: 100vh;
+  width: 100%;
+  padding: 10vh 2rem;
+}
+
+header h2 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin: .5rem;
+}
+
+.home {
+  background: #000 center url("images/hero.jpg");
+  background-attachment: fixed;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home .content {
+  min-height: 60vh;
+}
+
+.blockquote {
+  width: 75%;
+  margin: 0 auto;
+  font-size: 2rem !important;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+}
+
+cite a {
+  color: #FFF !important;
+}
+
+.see-menu {
+  width: 30%;
+  font-size: 2rem !important;
+  margin: 1rem 0;
+}
+
+.social-media a {
+  color: #415B80;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.social-media a:hover {
+  color: #ffca05;
+}
+
+.tab-content > section:not(.active) {
+  display: none !important;
+}
+
+.nav-pills {
+  padding: 1rem;
+}
+
+.nav-pills .nav-item .nav-link {
+  color: black;
+}
+
+.nav-pills .nav-item .active {
+  background: #415B80 !important;
+}
+
+.card-title {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.price {
+  float: right;
+}
+
+.price::before {
+  content: "$";
+}
+
+.menu .card {
+  margin-bottom: 1rem;
+}
+
+.menu img {
+  height: 35vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.dropdown-item {
+  font-size: 2rem;
+}
+
+.menu-content > section > .card {
+  max-width: 30vw;
+  margin-bottom: 2rem;
+}
+
+.about .content {
+  margin-top: 2rem;
+}
+
+.about-img {
+  width: 40%;
+}
+
+.description {
+  padding-left: 2rem;
+}
+
+.map {
+  width: 100%;
+  height: 100vh;
+}
+
+.popup {
+  width: 100%;
+  -webkit-transform: translate(-50%, 10px);
+          transform: translate(-50%, 10px);
+  text-align: center;
+}
+
+.directions {
+  background: #ffca05 !important;
+  border: none !important;
+  font-size: 2rem !important;
+  margin: 5px;
+}
+
+.phone {
+  color: #415B80;
+}
+
+.contact-btn {
+  background: black !important;
+}
+
+.hide-message {
+  display: none !important;
+}
+
+.message-sent {
+  margin: 2rem 0;
+}
+
+.required {
+  font-weight: bold;
+  color: red;
+}
+
+input {
+  height: 4rem !important;
+  font-size: 2rem !important;
+}
+
+textarea {
+  height: 8rem !important;
+  font-size: 2rem !important;
+}
+
+.contact button {
+  font-size: 2rem;
+}
+
+.footer {
+  padding: 2rem;
+  background: #415B80;
+  color: #fff;
+  font-family: "Muli", "Century Gothic", sans-serif;
+}
+
+.footer-heading {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffca05;
+}
+
+.contact-details {
+  list-style-type: none;
+  padding: 0;
+}
+
+.hours-type {
+  text-transform: uppercase;
+}
+
+.footer .col {
+  font-size: 1.5rem;
+}
+/*# sourceMappingURL=style.css.map */

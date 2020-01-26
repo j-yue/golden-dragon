@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Golden Dragon Chinese Restaurant</title>
+    <meta name="description" content="PWA for Golden Dragon Restaurant in Los Angeles.">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/ico" href="images/logo/favicon.ico">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.1.1/css/ol.css" type="text/css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="mediaQueries.css">
+    <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script&display=swap" rel="stylesheet">
+    <script src="loader.js"></script>
+</head>
+
+<body>
+
+    <div class="preloader">
+    </div>
+
+    <main>
+        <nav id="main-nav" class="navbar fixed-top navbar-expand-lg navbar-dark">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target=".navbar-collapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav w-100 d-flex flex-row justify-content-around flex-nowrap">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#location">Location</a>
+                    </li>
+                </ul>
+            </div>
+            <a class="mx-auto restaurant" href="#home">Golden Dragon</a>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav w-100 d-flex flex-row justify-content-around flex-nowrap">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <article class="home" id="home">
+
+            <section class="content d-flex flex-column justify-content-between">
+                <blockquote class="blockquote">
+                    <p>
+                        The place is noisy with conversations
+                        in the many languages of a multi- cultural
+                        hub like LA, but you can bet they all
+                        translate to delicious and satisfied!
+                    </p>
+
+                    <footer class="review">
+                        <cite>
+                            <a href="https://www.yelp.com/biz/golden-dragon-restaurant-los-angeles">
+                                <i class="fa fa-yelp"></i>
+                                Gregory G B.
+                            </a>
+                        </cite>
+                    </footer>
+                </blockquote>
+
+                <div class="text-center">
+                    <a href="#menu" class="btn see-menu btn-warning btn-lg">MENU</a>
+                </div>
+
+                <section class="social-media w-50 mx-auto d-flex justify-content-between">
+                    <a href="https://www.yelp.com/biz/golden-dragon-restaurant-los-angeles" target="_blank"><i
+                            class="fa fa-yelp fa-2x"></i></a>
+                    <a href="https://www.tripadvisor.com/Restaurant_Review-g32655-d1382260-Reviews-Golden_Dragon_Restaurant-Los_Angeles_California.html"
+                        target="_blank"><i class="fa fa-tripadvisor fa-2x"></i></a>
+                    <a href="https://www.facebook.com/pages/Golden-Dragon-Chinese-Restaurant/200639156617298"
+                        target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
+                </section>
+            </section>
+
+
+
+        </article>
+
+
+        <article class="menu" id="menu">
+            <header>
+                <h2>Menu</h2>
+            </header>
+
+            <ul class="nav justify-content-center nav-pills" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link" href="#appetizers" data-toggle="pill" role="tab" aria-controls="apps"
+                        aria-selected="true">Apps</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button"
+                        aria-haspopup="true" aria-expanded="false">Mains</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#meat" data-toggle="tab">Meat</a>
+                        <a class="dropdown-item" href="#noodles" data-toggle="tab">Noodles</a>
+                        <a class="dropdown-item" href="#seafood" data-toggle="tab">Seafood</a>
+                        <a class="dropdown-item" href="#rice" data-toggle="tab">Rice</a>
+                        <a class="dropdown-item" href="#soup" data-toggle="tab">Soup</a>
+                        <a class="dropdown-item" href="#tofu" data-toggle="tab">Tofu</a>
+                        <a class="dropdown-item" href="#vegetable" data-toggle="tab">Vegetable</a>
+                        <a class="dropdown-item" href="#specials" data-toggle="tab">Specials</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#desserts" data-toggle="pill" role="tab" aria-controls="desserts"
+                        aria-selected="false">Desserts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#drinks" data-toggle="pill" role="tab" aria-controls="drinks"
+                        aria-selected="false">Drinks</a>
+                </li>
+            </ul>
+
+
+            <section class="menu-content tab-content">
+                <section id="appetizers" class="tab-pane fade d-flex flex-row flex-wrap justify-content-around"
+                    role="tabpanel" aria-labelledby="apps-tab">
+                </section>
+
+
+                <section id="desserts" class="tab-pane fade d-flex flex-row flex-wrap justify-content-around"
+                    role="tabpanel" aria-labelledby="desserts-tab">
+                </section>
+
+
+                <section id="drinks" class="tab-pane fade d-flex flex-row flex-wrap justify-content-around"
+                    role="tabpanel" aria-labelledby="drinks-tab">
+                </section>
+
+                <section id="meat" class="tab-pane d-flex flex-row flex-wrap justify-content-around fade show active"
+                    role="tabpanel" aria-labelledby="meat-tab">
+                </section>
+                <section id="noodles" class="tab-pane fade d-flex flex-row flex-wrap justify-content-around"
+                    role="tabpanel" aria-labelledby="noodles-tab"></section>
+                <section id="rice" class="tab-pane fade d-flex flex-row flex-wrap justify-content-around"
+                    role="tabpanel" aria-labelledby="rice-tab"></section>
+                <section id="soup" class="tab-pane fade d-flex flex-row flex-wrap justify-content-around"
+                    role="tabpanel" aria-labelledby="soup-tab"></section>
+                <section id="seafood" class="tab-pane fade d-flex flex-row flex-wrap justify-content-around"
+                    role="tabpanel" aria-labelledby="seafood-tab"></section>
+                <section id="tofu" class="tab-pane fade d-flex flex-row flex-wrap justify-content-around"
+                    role="tabpanel" aria-labelledby="tofu-tab"></section>
+                <section id="specials" class="tab-pane fade d-flex flex-row flex-wrap justify-content-around"
+                    role="tabpanel" aria-labelledby="specials-tab"></section>
+                <section id="vegetable" class="tab-pane fade d-flex flex-row flex-wrap justify-content-around"
+                    role="tabpanel" aria-labelledby="vegetable-tab"></section>
+
+            </section>
+        </article>
+
+
+        <article class="location" id="location">
+
+            <section class="content">
+
+                <div id="map" class="map"></div>
+
+                <div class="hidden-popup card">
+                    <div class="card-body">
+                        <h5 class="card-title">Golden Dragon</h5>
+                        <address>960 N Broadway, Los Angeles, CA 90012</address>
+                        <a class="phone" href="tel://1-213-626-2039">+1 213 626 2039</a>
+                        <p><a class="directions btn btn-primary btn-lg"
+                                href="https://www.google.com/maps/dir//960+North+Broadway,+Los+Angeles,+CA/@34.0655814,-118.2712809,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x80c2c6594381d68d:0x7ec964a5d87f8fb3!2m2!1d-118.2362614!2d34.0655153!3e0"
+                                target="_blank">Get Directions</a></p>
+                    </div>
+                </div>
+
+
+                <div id="popup" class="popup card">
+                    <div class="card-body">
+                        <h5 class="card-title">Golden Dragon</h5>
+                        <address>960 N Broadway, Los Angeles, CA 90012</address>
+                        <a class="phone" href="tel://1-213-626-2039">+1 213 626 2039</a>
+                        <p><a class="directions btn btn-primary btn-lg"
+                                href="https://www.google.com/maps/dir//960+North+Broadway,+Los+Angeles,+CA/@34.0655814,-118.2712809,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x80c2c6594381d68d:0x7ec964a5d87f8fb3!2m2!1d-118.2362614!2d34.0655153!3e0"
+                                target="_blank">Get Directions</a></p>
+                    </div>
+                </div>
+
+
+
+            </section>
+        </article>
+
+
+        <article class="about" id="about">
+
+            <header>
+                <h2>About</h2>
+            </header>
+
+            <section class="content d-flex flex-row justify-content-between">
+
+                <img src="images/front.jpg" class="about-img rounded mx-auto d-block img-thumbnail" alt="Storefront">
+                <section class="description">
+                    <p>
+                        Located in Los Angeles district, visitors can enjoy
+                        Golden Dragon Restaurant's flavorful Chinese cuisine
+                        on its own, or season their dish with a splash of soy
+                        sauce. Golden Dragon Restaurant is a jackpot for those
+                        looking for low-fat and gluten-free meal options. Ready
+                        for a drink to unwind? At this restaurant, you can pair
+                        your meal with something from their full bar. Having
+                        trouble finding that family-friendly restaurant everyone
+                        will love? This restaurant serves all ages, so little
+                        ones are welcome to come along, too. Seating is readily
+                        available at Golden Dragon Restaurant for those with
+                        large parties.
+                    </p>
+
+                    <p>
+                        Formal attire is required so that you can look as nice
+                        as your meal does. For those in a hurry, the restaurant
+                        lets you take your meal or snack to go.
+                    </p>
+
+                    <p>Hand your keys to the valet driver or choose your own
+                        spot in the lot next door. Cyclists will also appreciate
+                        the plentiful space to lock up their bikes outside the
+                        restaurant.
+                    </p>
+
+                    <p>
+                        Customers should be prepared to spend around $30, but
+                        more importantly, they should be prepared to enjoy a
+                        great meal. Catering to diners throughout the day
+                        (and night), Golden Dragon Restaurant serves AM, PM,
+                        and midday meals. Chicken fried rice, egg rolls, and
+                        more await you at Golden Dragon Restaurant.
+                    </p>
+                </section>
+            </section>
+
+        </article>
+
+
+        <article class="contact" id="contact">
+            <header>
+                <h2>Contact</h2>
+            </header>
+
+            <section class="content">
+
+                <div class="card message-sent border-success hide-message">
+                    <div class="card-body text-success">
+                        <div class="card-text">Your message has been sent.</div>
+                    </div>
+                </div>
+
+                <form class="needs-validation" novalidate>
+                    <div class="form-group">
+                        <label for="name">Name<span class="required"> *</span></label>
+                        <input type="text" id="name" class="form-control" placeholder="Name" required>
+                        <div class="invalid-feedback">Please provide your name.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail<span class="required"> *</span></label>
+                        <input type="email" id="email" class="form-control" placeholder="E-mail"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                        <div class="invalid-feedback">Please provide your email.</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="msg">Message<span class="required"> *</span></label>
+                        <textarea id="msg" class="form-control" placeholder="Message" required></textarea>
+                        <div class="invalid-feedback">Please enter a message.</div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block contact-btn">Send Message</button>
+
+                </form>
+
+            </section>
+        </article>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row d-flex flex-row justify-content-around">
+                    <div class="col-sm-4">
+                        <h3 class="footer-heading">About Us</h3>
+                        <p>Historic Chinese restaurant in the heart of Chinatown.
+                            Famous for our dim sum and Cantonese dishes.
+                        </p>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <h3 class="footer-heading">Contact Info</h3>
+                        <ul class="contact-details">
+                            <li>
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                960 N Broadway
+                                Los Angeles, CA 90012
+                            </li>
+
+                            <li>
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                +1 213 626 2039
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-auto">
+                        <h3 class="footer-heading">Hours</h3>
+                        <div class="hours-type">Mon - Sun</div>
+                        <div class="hours">8AM - 10PM</div>
+                        <div class="hours-type">Dim Sum</div>
+                        <div class="hours">8AM - 3PM</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.1.1/build/ol.js"></script>
+    <script src="loader.js"></script>
+    <script src="map.js"></script>
+    <script src="menu.js"></script>
+    <script src="eventListeners.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./service-worker.js');
+        };
+    </script>
+    <script src="service-worker.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.5/umd/popper.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

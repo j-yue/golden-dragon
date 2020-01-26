@@ -1,0 +1,315 @@
+$main-font: 'Verdana', 'Century Gothic', 'Open Sans', sans-serif;
+$nav-font: 'Muli', 'Century Gothic', sans-serif;
+$logo-font: bold 3.5rem 'Petit Formal Script', cursive;
+
+$font-size: 2rem;
+$header-size: 2.5rem;
+$quote-size: 2rem;
+
+
+$main-padding: 2rem;
+
+$home-color: #fff;
+$nav-color: #fff;
+$nav-hover: #ffca05;
+$icon-color: #415B80;
+$menu-bg: #415B80;
+$icon-hover: #ffca05;
+$footer-bg: #415B80;
+$footer-color: #fff;
+$popup-color: #636e72;
+$directions-color: #ffca05;
+
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: $main-font !important;
+    font-size: $font-size !important;
+    overflow: hidden;
+}
+
+
+.preloader {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .8s;
+    position: absolute;
+    z-index: 1000;
+    background: $icon-color center url('images/logo/cover.png');
+    background-attachment: fixed;
+    color: $home-color;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+main {
+    opacity: 0;
+    transition: 1s;
+    position: absolute;
+    z-index: 500;
+}
+
+
+
+//-----------------------MAIN NAVBAR---------------------
+#main-nav {
+    transition: .5s;
+    background: rgba(0, 0, 0, 1);
+    font-family: $nav-font;
+    font-size: $header-size;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: $nav-color !important;
+    transition: .3s;
+}
+
+.nav-item {
+    text-align: center;
+}
+
+.restaurant {
+    font: $logo-font;
+    color: $nav-color !important;
+    transition: .3s;
+    white-space: nowrap;
+}
+
+.restaurant:hover {
+    text-decoration: none;
+    color: $nav-hover !important;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: $nav-hover !important;
+}
+
+
+//-----------------------EACH SECTION AND HEADER---------------------
+main > article {
+    min-height: 100vh;
+    width: 100%;
+    padding: 10vh $main-padding;
+}
+
+
+header h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: $header-size;
+    margin: .5rem;
+}
+
+//-----------------------HOME---------------------
+.home {
+    background: #000 center url('images/hero.jpg');
+    background-attachment: fixed;
+    color: $home-color;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center; 
+}
+
+.home .content {
+    min-height: 60vh;
+}
+
+.blockquote {
+    width: 75%;
+    margin: 0 auto;
+    font-size: $quote-size !important;
+    text-align: center;
+    background: rgba(0,0,0, .5);
+    padding: $main-padding;
+}
+
+
+cite a {
+    color: #FFF !important;
+}
+
+.see-menu {
+    width: 30%;
+    font-size: $font-size !important;
+    margin: 1rem 0;
+}
+
+.social-media a {
+    color: $icon-color;
+    transition: .3s;
+}
+
+.social-media a:hover {
+    color: $icon-hover;
+}
+
+//-----------------------MENU---------------------
+
+//remove large spacing caused by bootstrap
+.tab-content > section:not(.active) {
+    display: none !important;
+}
+.nav-pills {
+    padding: 1rem
+}
+
+.nav-pills .nav-item .nav-link {
+    color: black;
+}
+
+.nav-pills .nav-item .active {
+    background: $menu-bg !important;
+}
+
+
+.card-title {
+    font-size: $font-size;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.price {
+    float: right;
+}
+
+.price::before {
+    content: "$";
+}
+
+.menu .card {
+    margin-bottom: 1rem;
+}
+
+.menu img {
+    height: 35vh;
+    // max-height: 50vh;
+    object-fit: cover;
+}
+
+.dropdown-item {
+    font-size: $font-size;
+}
+
+.menu-content > section > .card {
+    max-width: 30vw;
+    margin-bottom: 2rem;
+}
+
+//-----------------------ABOUT---------------------
+
+.about .content {
+    margin-top: $main-padding;
+}
+
+.about-img {
+    width: 40%;
+}
+
+.description {
+    padding-left: 2rem;
+}
+
+//-----------------------LOCATION---------------------
+
+
+.map {
+    width: 100%;
+    height: 100vh;
+}
+
+.popup {
+    width: 100%;
+    transform: translate(-50%, 10px);
+    text-align: center;
+}
+
+.directions {
+    background: $directions-color !important;
+    border: none !important;
+    font-size: $font-size !important;
+    margin: 5px;
+}
+
+.phone {
+    color: $menu-bg;
+}
+
+//-----------------------CONTACT---------------------
+
+.contact-btn {
+    background: black !important;
+}
+
+.hide-message {
+    display: none !important;
+}
+
+.message-sent {
+    margin: $main-padding 0;
+}
+
+
+.required {
+    font-weight: bold;
+    color: rgba(256, 0, 0, 1);
+}
+
+
+input {
+    height: 4rem !important;
+    font-size: $font-size !important;
+}
+
+textarea {
+    height: 8rem !important;
+    font-size: $font-size !important;
+}
+
+.contact button {
+    font-size: $font-size;
+}
+
+
+//-----------------------FOOTER---------------------
+
+.footer {
+    padding: $main-padding;
+    background: $footer-bg;
+    color: $footer-color;
+    font-family: $nav-font;
+}
+
+.footer-heading {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $nav-hover;
+}
+
+.contact-details {
+    list-style-type: none;
+    padding: 0;
+}
+
+.hours-type {
+    text-transform: uppercase;
+    
+}
+
+.footer .col {
+    font-size: 1.5rem;
+}
