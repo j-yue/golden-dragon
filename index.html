@@ -11,16 +11,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" type="image/ico" href="images/logo/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="images/logo/apple-touch-icon.png">
-    <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="mediaQueries.css"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.1.1/css/ol.css" type="text/css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="mediaQueries.css">
     <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script&display=swap" rel="stylesheet">
-    <!-- <script src="loader.js"></script> -->
+
 </head>
 
 <body>
@@ -29,13 +29,16 @@
     </div>
 
     <main>
+
         <nav id="main-nav" class="navbar fixed-top navbar-expand-lg navbar-dark">
+            
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target=".navbar-collapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav w-100 d-flex flex-row justify-content-around flex-nowrap">
+                <ul class="nav navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="#menu">Menu</a>
                     </li>
@@ -44,9 +47,13 @@
                     </li>
                 </ul>
             </div>
+
+            <!--w-100 d-flex flex-row justify-content-around flex-nowrap -->
+
             <a class="mx-auto restaurant" href="#home">Golden Dragon</a>
+
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav w-100 d-flex flex-row justify-content-around flex-nowrap">
+                <ul class="nav navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="#about">About</a>
                     </li>
@@ -55,11 +62,12 @@
                     </li>
                 </ul>
             </div>
+
         </nav>
 
         <article class="home" id="home">
 
-            <section class="content d-flex flex-column justify-content-between">
+            <section class="content container-fluid d-flex flex-column justify-content-around">
                 <blockquote class="blockquote">
                     <p>
                         The place is noisy with conversations
@@ -110,6 +118,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button"
                         aria-haspopup="true" aria-expanded="false">Mains</a>
+
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="#meat" data-toggle="tab">Meat</a>
                         <a class="dropdown-item" href="#noodles" data-toggle="tab">Noodles</a>
@@ -120,6 +129,7 @@
                         <a class="dropdown-item" href="#vegetable" data-toggle="tab">Vegetable</a>
                         <a class="dropdown-item" href="#specials" data-toggle="tab">Specials</a>
                     </div>
+
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#desserts" data-toggle="pill" role="tab" aria-controls="desserts"
@@ -171,7 +181,7 @@
 
         <article class="location" id="location">
 
-            <section class="content">
+            <section class="content container-fluid">
 
                 <div id="map" class="map"></div>
 
@@ -210,7 +220,7 @@
                 <h2>About</h2>
             </header>
 
-            <section class="content d-flex flex-row justify-content-between">
+            <section class="content container-fluid">
 
                 <img src="images/front.jpg" class="about-img rounded mx-auto d-block img-thumbnail" alt="Storefront">
                 <section class="description">
@@ -260,7 +270,7 @@
                 <h2>Contact</h2>
             </header>
 
-            <section class="content">
+            <section class="content container-fluid">
 
                 <div class="card message-sent border-success hide-message">
                     <div class="card-body text-success">
