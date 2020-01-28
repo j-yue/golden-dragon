@@ -1,5 +1,6 @@
 {
-  "name": "Golden Dragon",
+  "short_name": "Golden Dragon",
+  "name": "Golden Dragon Chinese Restaurant",
   "icons": [
       {
           "src": "images/logo/android-chrome-192x192",
@@ -12,7 +13,9 @@
       "sizes": "512x512"
     }
   ],
+  "start_url": "/index.html",
   "background_color": "#ffca05",
   "display": "fullscreen",
+  "orientation": "portrait",
   "theme_color": "#ffca05"
 }
