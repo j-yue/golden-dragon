@@ -60,9 +60,8 @@ body {
     z-index: 1000;
     background: $theme-color center url('images/logo/cover.png');
     background-attachment: fixed;
-    // color: $home-color;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-size: cover;
 }
 
 

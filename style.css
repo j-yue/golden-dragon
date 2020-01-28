@@ -23,8 +23,8 @@ body {
   z-index: 1000;
   background: #ffca05 center url("images/logo/cover.png");
   background-attachment: fixed;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-size: cover;
 }
 
 main {
