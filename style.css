@@ -1,5 +1,5 @@
 html {
-  font-size: 10px;
+  font-size: 16px;
   scroll-behavior: smooth;
 }
 
@@ -9,21 +9,20 @@ body {
   width: 100%;
   height: 100%;
   font-family: "Verdana", "Century Gothic", "Open Sans", sans-serif !important;
-  font-size: 2rem !important;
+  font-size: 1.5rem !important;
   overflow: hidden;
 }
 
 .preloader {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   opacity: 0;
   -webkit-transition: .8s;
   transition: .8s;
   position: absolute;
   z-index: 1000;
-  background: #415B80 center url("images/logo/cover.png");
+  background: #ffca05 center url("images/logo/cover.png");
   background-attachment: fixed;
-  color: #fff;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -37,34 +36,21 @@ main {
 }
 
 #main-nav {
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   background: black;
   font-family: "Muli", "Century Gothic", sans-serif;
-  font-size: 2.5rem;
-}
-
-.navbar-nav .nav-item .nav-link {
-  color: #fff !important;
-  -webkit-transition: .3s;
-  transition: .3s;
+  font-size: 2rem;
 }
 
 .nav-item {
   text-align: center;
 }
 
-.restaurant {
-  font: bold 3.5rem "Petit Formal Script", cursive;
+.navbar-nav .nav-item .nav-link {
   color: #fff !important;
-  -webkit-transition: .3s;
-  transition: .3s;
-  white-space: nowrap;
-}
-
-.restaurant:hover {
-  text-decoration: none;
-  color: #ffca05 !important;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .navbar-nav .nav-item .nav-link:hover {
@@ -74,14 +60,13 @@ main {
 main > article {
   min-height: 100vh;
   width: 100%;
-  padding: 10vh 2rem;
+  padding: 10vh 1.5rem;
 }
 
 header h2 {
   text-align: center;
   font-weight: bold;
-  font-size: 2.5rem;
-  margin: .5rem;
+  font-size: 2rem;
 }
 
 .home {
@@ -91,48 +76,34 @@ header h2 {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .home .content {
-  min-height: 60vh;
+  min-height: 80vh;
 }
 
 .blockquote {
   width: 75%;
   margin: 0 auto;
-  font-size: 2rem !important;
+  font-size: 1.5rem !important;
   text-align: center;
   background: rgba(0, 0, 0, 0.5);
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 cite a {
-  color: #FFF !important;
+  color: #fff !important;
 }
 
 .see-menu {
   width: 30%;
-  font-size: 2rem !important;
-  margin: 1rem 0;
+  font-size: 1.5rem !important;
 }
 
 .social-media a {
   color: #415B80;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .social-media a:hover {
@@ -148,7 +119,7 @@ cite a {
 }
 
 .nav-pills .nav-item .nav-link {
-  color: black;
+  color: #000;
 }
 
 .nav-pills .nav-item .active {
@@ -156,10 +127,10 @@ cite a {
 }
 
 .card-title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
   font-weight: bold;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .price {
@@ -171,7 +142,7 @@ cite a {
 }
 
 .menu .card {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .menu img {
@@ -181,24 +152,29 @@ cite a {
 }
 
 .dropdown-item {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .menu-content > section > .card {
   max-width: 30vw;
-  margin-bottom: 2rem;
-}
-
-.about .content {
-  margin-top: 2rem;
 }
 
 .about-img {
-  width: 40%;
+  height: 30%;
+  margin-bottom: 1rem;
 }
 
-.description {
-  padding-left: 2rem;
+.restaurant {
+  text-transform: uppercase;
+  color: #ffca05;
+  font-weight: bold;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.restaurant:hover {
+  text-decoration: none;
+  color: #fff !important;
 }
 
 .map {
@@ -213,10 +189,14 @@ cite a {
   text-align: center;
 }
 
+.hidden-popup {
+  text-align: center;
+}
+
 .directions {
   background: #ffca05 !important;
   border: none !important;
-  font-size: 2rem !important;
+  font-size: 1.5rem !important;
   margin: 5px;
 }
 
@@ -225,7 +205,7 @@ cite a {
 }
 
 .contact-btn {
-  background: black !important;
+  background: #ffca05 !important;
 }
 
 .hide-message {
@@ -233,7 +213,7 @@ cite a {
 }
 
 .message-sent {
-  margin: 2rem 0;
+  margin: 1.5rem 0;
 }
 
 .required {
@@ -243,20 +223,20 @@ cite a {
 
 input {
   height: 4rem !important;
-  font-size: 2rem !important;
+  font-size: 1.5rem !important;
 }
 
 textarea {
   height: 8rem !important;
-  font-size: 2rem !important;
+  font-size: 1.5rem !important;
 }
 
 .contact button {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .footer {
-  padding: 2rem;
+  padding: 1.5rem;
   background: #415B80;
   color: #fff;
   font-family: "Muli", "Century Gothic", sans-serif;

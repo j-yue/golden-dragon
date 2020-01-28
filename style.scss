@@ -1,13 +1,27 @@
 $main-font: 'Verdana', 'Century Gothic', 'Open Sans', sans-serif;
 $nav-font: 'Muli', 'Century Gothic', sans-serif;
-$logo-font: bold 3.5rem 'Petit Formal Script', cursive;
+$logo-font: bold 2rem 'Petit Formal Script', cursive;
 
-$font-size: 2rem;
-$header-size: 2.5rem;
-$quote-size: 2rem;
+$font-size: 1.5rem;
+$header-size: 2rem;
+$quote-size: 1.5rem;
+$logo-size: 2rem;
+$header-margin: .5rem;
+$header-padding: 1rem;
 
 
-$main-padding: 2rem;
+$main-padding: 1.5rem;
+
+$text-primary: #000;
+$text-secondary: #fff;
+$links-primary: #fff;
+$links-secondary: #ffca05;
+$bg-primary: #415B80;
+$buttons-primary: #ffca05;
+$theme-color: #ffca05;
+
+$transition: .3s;
+
 
 $home-color: #fff;
 $nav-color: #fff;
@@ -17,12 +31,12 @@ $menu-bg: #415B80;
 $icon-hover: #ffca05;
 $footer-bg: #415B80;
 $footer-color: #fff;
-$popup-color: #636e72;
+// $popup-color: #636e72;
 $directions-color: #ffca05;
 
 
 html {
-    font-size: 10px;
+    font-size: 16px;
     scroll-behavior: smooth;
 }
 
@@ -38,15 +52,15 @@ body {
 
 
 .preloader {
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     opacity: 0;
     transition: .8s;
     position: absolute;
     z-index: 1000;
-    background: $icon-color center url('images/logo/cover.png');
+    background: $theme-color center url('images/logo/cover.png');
     background-attachment: fixed;
-    color: $home-color;
+    // color: $home-color;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -63,35 +77,24 @@ main {
 
 //-----------------------MAIN NAVBAR---------------------
 #main-nav {
-    transition: .5s;
+    transition: $transition;
     background: rgba(0, 0, 0, 1);
     font-family: $nav-font;
     font-size: $header-size;
-}
-
-.navbar-nav .nav-item .nav-link {
-    color: $nav-color !important;
-    transition: .3s;
 }
 
 .nav-item {
     text-align: center;
 }
 
-.restaurant {
-    font: $logo-font;
-    color: $nav-color !important;
-    transition: .3s;
-    white-space: nowrap;
+.navbar-nav .nav-item .nav-link {
+    color: $links-primary !important;
+    transition: $transition;
 }
 
-.restaurant:hover {
-    text-decoration: none;
-    color: $nav-hover !important;
-}
 
 .navbar-nav .nav-item .nav-link:hover {
-    color: $nav-hover !important;
+    color: $links-secondary !important;
 }
 
 
@@ -107,7 +110,7 @@ header h2 {
     text-align: center;
     font-weight: bold;
     font-size: $header-size;
-    margin: .5rem;
+    // margin: $header-margin;
 }
 
 //-----------------------HOME---------------------
@@ -118,14 +121,10 @@ header h2 {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: center; 
 }
 
 .home .content {
-    min-height: 60vh;
+    min-height: 80vh;
 }
 
 .blockquote {
@@ -139,22 +138,21 @@ header h2 {
 
 
 cite a {
-    color: #FFF !important;
+    color: $text-secondary !important;
 }
 
 .see-menu {
     width: 30%;
     font-size: $font-size !important;
-    margin: 1rem 0;
 }
 
 .social-media a {
-    color: $icon-color;
-    transition: .3s;
+    color: $bg-primary;
+    transition: $transition;
 }
 
 .social-media a:hover {
-    color: $icon-hover;
+    color: $links-secondary;
 }
 
 //-----------------------MENU---------------------
@@ -163,16 +161,17 @@ cite a {
 .tab-content > section:not(.active) {
     display: none !important;
 }
+
 .nav-pills {
-    padding: 1rem
+    padding: $header-padding;
 }
 
 .nav-pills .nav-item .nav-link {
-    color: black;
+    color: $text-primary;
 }
 
 .nav-pills .nav-item .active {
-    background: $menu-bg !important;
+    background: $bg-primary !important;
 }
 
 
@@ -180,7 +179,7 @@ cite a {
     font-size: $font-size;
     text-align: center;
     font-weight: bold;
-    margin-top: 1rem;
+    margin-top: $header-margin;
 }
 
 .price {
@@ -192,12 +191,11 @@ cite a {
 }
 
 .menu .card {
-    margin-bottom: 1rem;
+    margin-bottom: $header-margin;
 }
 
 .menu img {
     height: 35vh;
-    // max-height: 50vh;
     object-fit: cover;
 }
 
@@ -207,22 +205,41 @@ cite a {
 
 .menu-content > section > .card {
     max-width: 30vw;
-    margin-bottom: 2rem;
+    // margin-bottom: 2rem;
 }
 
 //-----------------------ABOUT---------------------
 
-.about .content {
-    margin-top: $main-padding;
-}
-
 .about-img {
-    width: 40%;
+    height: 30%;
+    margin-bottom: 1rem;
 }
 
-.description {
-    padding-left: 2rem;
+
+.restaurant {
+    text-transform: uppercase;
+    color: $theme-color;
+    font-weight: bold;
+    transition: $transition;
 }
+
+.restaurant:hover {
+    text-decoration: none;
+    color: $links-primary !important;
+}
+
+
+// .about .content {
+//     margin-top: $main-padding;
+// }
+
+// .about-img {
+//     width: 40%;
+// }
+
+// .description {
+//     padding-left: 2rem;
+// }
 
 //-----------------------LOCATION---------------------
 
@@ -238,21 +255,25 @@ cite a {
     text-align: center;
 }
 
+.hidden-popup {
+    text-align: center;
+}
+
 .directions {
-    background: $directions-color !important;
+    background: $buttons-primary !important;
     border: none !important;
     font-size: $font-size !important;
     margin: 5px;
 }
 
 .phone {
-    color: $menu-bg;
+    color: $bg-primary;
 }
 
 //-----------------------CONTACT---------------------
 
 .contact-btn {
-    background: black !important;
+    background: $buttons-primary !important;
 }
 
 .hide-message {
@@ -289,15 +310,15 @@ textarea {
 
 .footer {
     padding: $main-padding;
-    background: $footer-bg;
-    color: $footer-color;
+    background: $bg-primary;
+    color: $text-secondary;
     font-family: $nav-font;
 }
 
 .footer-heading {
     font-weight: bold;
     text-transform: uppercase;
-    color: $nav-hover;
+    color: $theme-color;
 }
 
 .contact-details {
