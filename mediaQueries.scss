@@ -4,6 +4,10 @@
         background-size: 100vw auto;
         background-attachment: initial;
     }
+
+    .social-media a {
+        background: rgba(255, 255, 255, .5);
+    }
 }
 
 @media screen and (min-width: 0px) {
@@ -33,6 +37,10 @@
 @media screen and (min-width: 500px) {
     .menu-content > #meat .card {
         max-width: 40vw;
+    }
+
+    .social-media a {
+        background: rgba(0,0,0, .5);
     }
 }
 
