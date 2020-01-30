@@ -13,7 +13,9 @@
       "sizes": "512x512"
     }
   ],
+  "lang": "en-US",
   "start_url": "/golden-dragon/index.html",
+  "scope": "/golden-dragon/",
   "background_color": "#ffca05",
   "display": "standalone",
   "orientation": "portrait",
