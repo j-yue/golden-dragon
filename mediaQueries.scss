@@ -1,9 +1,9 @@
-// mobile devices disable fixed background attachment
+// mobile devices disable fixed background attachment and cover for background-size
 @media (hover: none) {
-    // .home {
-    //     background-size: contain;
-    //     background-attachment: scroll;
-    // }
+    .home {
+        background-size: 100%;
+        background-attachment: scroll;
+    }
 }
 
 @media screen and (min-width: 0px) {
