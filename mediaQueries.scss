@@ -1,7 +1,7 @@
 // mobile devices disable fixed background attachment and cover for background-size
 @media (hover: none) {
     .home {
-        background-size: 100%;
+        background-size: 100vw auto;
         background-attachment: initial;
     }
 }
