@@ -1,3 +1,11 @@
+// mobile devices disable fixed background attachment
+@media (hover: none) {
+    // .home {
+    //     background-size: contain;
+    //     background-attachment: scroll;
+    // }
+}
+
 @media screen and (min-width: 0px) {
     html {
         font-size: 10px;
@@ -62,6 +70,6 @@
 
 @media screen and (min-width: 1024px) {
     html {
-        font-size: 1.25vw;
+        font-size: 1vw;
     }
 }
