@@ -13,15 +13,15 @@ body {
 }
 
 .preloader {
+  width: 100%;
   height: 100vh;
   opacity: 0;
   -webkit-transition: .8s;
   transition: .8s;
-  position: absolute;
+  position: fixed;
   z-index: 1000;
   background: #ffca05 center url("images/logo/cover.png");
-  background-attachment: fixed;
-  background-size: contain;
+  background-size: 100%;
   background-repeat: no-repeat;
 }
 

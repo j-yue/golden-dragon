@@ -52,16 +52,17 @@ body {
 
 
 .preloader {
+    width: 100%;
     height: 100vh;
     opacity: 0;
     transition: .8s;
-    position: absolute;
+    position: fixed;
     z-index: 1000;
     background: $theme-color center url('images/logo/cover.png');
-    background-attachment: fixed;
-    background-size: contain;
+    background-size: 100%;
     background-repeat: no-repeat;
 }
+
 
 
 main {
