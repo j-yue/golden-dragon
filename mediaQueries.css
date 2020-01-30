@@ -1,7 +1,7 @@
 @media (hover: none) {
   .home {
     background-size: 100%;
-    background-attachment: scroll;
+    background-attachment: initial;
   }
 }
 
