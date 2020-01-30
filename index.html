@@ -19,7 +19,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="images/logo/apple-touch-icon.png">
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="style.css">
-    <!-- <link rel="stylesheet" href="mediaQueries.css"> -->
+    <link rel="stylesheet" href="mediaQueries.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet"
@@ -31,7 +31,7 @@
 
 <body>
 
-    <div class="preloader">
+    <div class="preloader w-100 container-fluid">
     </div>
 
     <main>
@@ -44,7 +44,7 @@
             </button>
 
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav w-100">
                     <li class="nav-item">
                         <a class="nav-link" href="#menu">Menu</a>
                     </li>
@@ -59,7 +59,7 @@
             <a class="mx-auto restaurant" href="#home">Golden Dragon</a>
 
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav w-100">
                     <li class="nav-item">
                         <a class="nav-link" href="#about">About</a>
                     </li>
@@ -73,7 +73,7 @@
 
         <article class="home" id="home">
 
-            <section class="content container-fluid d-flex flex-column justify-content-around">
+            <section class="content d-flex flex-column justify-content-around">
                 <blockquote class="blockquote">
                     <p>
                         The place is noisy with conversations
@@ -96,7 +96,7 @@
                     <a href="#menu" class="btn see-menu btn-warning btn-lg">MENU</a>
                 </div>
 
-                <section class="social-media w-50 mx-auto d-flex justify-content-between">
+                <section class="social-media w-75 mx-auto d-flex justify-content-between">
                     <a href="https://www.yelp.com/biz/golden-dragon-restaurant-los-angeles" target="_blank"><i
                             class="fa fa-yelp fa-2x"></i></a>
                     <a href="https://www.tripadvisor.com/Restaurant_Review-g32655-d1382260-Reviews-Golden_Dragon_Restaurant-Los_Angeles_California.html"
@@ -186,11 +186,13 @@
 
 
         <article class="location" id="location">
+            <header>
+                <h2>Location</h2>
+            </header>
 
             <section class="content container-fluid">
 
-                <div id="map" class="map"></div>
-
+                
                 <div class="hidden-popup card">
                     <div class="card-body">
                         <h5 class="card-title">Golden Dragon</h5>
@@ -202,8 +204,11 @@
                     </div>
                 </div>
 
+                <div id="map" class="map w-100"></div>
 
-                <div id="popup" class="popup card">
+
+                <!-- unsure if should keep this -->
+                <!-- <div id="popup" class="popup card">
                     <div class="card-body">
                         <h5 class="card-title">Golden Dragon</h5>
                         <address>960 N Broadway, Los Angeles, CA 90012</address>
@@ -212,7 +217,7 @@
                                 href="https://www.google.com/maps/dir//960+North+Broadway,+Los+Angeles,+CA/@34.0655814,-118.2712809,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x80c2c6594381d68d:0x7ec964a5d87f8fb3!2m2!1d-118.2362614!2d34.0655153!3e0"
                                 target="_blank">Get Directions</a></p>
                     </div>
-                </div>
+                </div> -->
 
 
 
@@ -310,7 +315,7 @@
         </article>
 
         <footer class="footer">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row d-flex flex-row justify-content-around">
                     <div class="col-sm-4">
                         <h3 class="footer-heading">About Us</h3>
@@ -357,7 +362,7 @@
             navigator.serviceWorker.register('./service-worker.js');
         };
     </script>
-    <script src="service-worker.js"></script>
+    <!-- <script src="service-worker.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>

@@ -1,79 +1,72 @@
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 0px) {
   html {
-    font-size: 7px;
+    font-size: 10px;
   }
-  .blockquote {
-    font-size: 1.75rem !important;
+  .menu-content > #meat .card {
+    max-width: 90vw;
   }
+}
+
+@media screen and (min-width: 375px) {
   .restaurant {
-    font-size: 2.5rem;
-    margin: 5px 0;
+    font-size: 2rem;
   }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (min-width: 425px) {
   html {
-    font-size: 8px;
-  }
-  .menu-content > section > .card {
-    min-width: 70vw;
-  }
-  .map {
-    height: 50vh;
-  }
-  .popup {
-    display: none;
-  }
-  .hidden-popup {
-    width: 100%;
-    text-align: center;
-    margin-top: 2rem;
+    font-size: 10px;
   }
 }
 
-@media screen and (max-width: 768px) {
-  .navbar-nav {
-    display: block !important;
-  }
-  .navbar-nav .nav-item {
-    text-align: center;
-  }
-  .menu-content > section > .card {
+@media screen and (min-width: 500px) {
+  .menu-content > #meat .card {
     max-width: 40vw;
   }
 }
 
-@media screen and (max-width: 1024px) {
-  html {
-    font-size: 10px !important;
+@media screen and (min-width: 575px) {
+  .footer .container .row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
   }
-  .restaurant {
-    font-size: 2rem;
-  }
-  .about .content {
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-flow: column nowrap !important;
-            flex-flow: column nowrap !important;
-  }
-  .about-img {
-    height: 50vh;
-    margin-bottom: 1rem;
+  .hours {
+    font-family: "Georgia", serif;
   }
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (min-width: 768px) {
   html {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 
-@media screen and (max-width: 2000px) {
-  html {
-    font-size: 16px;
+@media screen and (min-width: 992px) {
+  #main-nav {
+    overflow: hidden;
   }
-  .hidden-popup {
-    display: none;
+  .navbar-collapse ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .menu-content > #meat .card {
+    max-width: 30vw;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 1.25vw;
   }
 }
 /*# sourceMappingURL=mediaQueries.css.map */

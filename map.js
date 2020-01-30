@@ -1,11 +1,12 @@
 const createMap = () => {
     let [lon, lat] = [-118.236214, 34.065498];
 
-    let popup = new ol.Overlay({
-        pos: ol.proj.fromLonLat([lon, lat]),
-        element: document.querySelector('#popup')
+    //unsure if popup should be a map marker or separate dialog
+    // let popup = new ol.Overlay({
+    //     pos: ol.proj.fromLonLat([lon, lat]),
+    //     element: document.querySelector('#popup')
 
-    });
+    // });
 
     let map = new ol.Map({
         target: 'map',
@@ -17,7 +18,7 @@ const createMap = () => {
             })
         ],
         controls: [],
-        overlays: [popup],
+        // overlays: [popup],
         interactions: [],
         view: new ol.View({
             center: ol.proj.fromLonLat([lon, lat]),
@@ -25,7 +26,7 @@ const createMap = () => {
         })
     });
 
-    popup.setPosition(ol.proj.fromLonLat([lon, lat]));
+    // popup.setPosition(ol.proj.fromLonLat([lon, lat]));
 
     let marker = new ol.Feature({
         geometry: new ol.geom.Point(

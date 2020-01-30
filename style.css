@@ -1,5 +1,4 @@
 html {
-  font-size: 16px;
   scroll-behavior: smooth;
 }
 
@@ -15,7 +14,6 @@ body {
 
 .preloader {
   height: 100vh;
-  width: 100vw;
   opacity: 0;
   -webkit-transition: .8s;
   transition: .8s;
@@ -75,7 +73,6 @@ header h2 {
   color: #fff;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
 }
 
 .home .content {
@@ -91,8 +88,16 @@ header h2 {
   padding: 1.5rem;
 }
 
-cite a {
-  color: #fff !important;
+.blockquote i {
+  color: #d32323;
+}
+
+.blockquote a {
+  color: #fff;
+}
+
+.blockquote a:hover {
+  color: #fff;
 }
 
 .see-menu {
@@ -101,9 +106,24 @@ cite a {
 }
 
 .social-media a {
-  color: #415B80;
+  color: #fff;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 1rem;
+  transition: 0.3s;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.social-media a:hover {
+  background: black;
+}
+
+.social-media a:active {
+  background: #415B80;
 }
 
 .social-media a:hover {
@@ -155,10 +175,6 @@ cite a {
   font-size: 1.5rem;
 }
 
-.menu-content > section > .card {
-  max-width: 30vw;
-}
-
 .about-img {
   height: 30%;
   margin-bottom: 1rem;
@@ -170,6 +186,7 @@ cite a {
   font-weight: bold;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  font-size: 1.5rem;
 }
 
 .restaurant:hover {
@@ -177,9 +194,12 @@ cite a {
   color: #fff !important;
 }
 
+.location header {
+  margin-bottom: 1.5rem;
+}
+
 .map {
-  width: 100%;
-  height: 100vh;
+  height: 50vh;
 }
 
 .popup {
@@ -206,6 +226,7 @@ cite a {
 
 .contact-btn {
   background: #ffca05 !important;
+  border: none !important;
 }
 
 .hide-message {
