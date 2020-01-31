@@ -194,23 +194,26 @@ header h2 {
   color: #fff !important;
 }
 
+.location {
+  padding: 0;
+}
+
+.location .content {
+  padding: 0;
+}
+
 .location header {
   margin-bottom: 1.5rem;
 }
 
 .map {
-  height: 50vh;
+  height: 90vh;
 }
 
 .popup {
-  width: 100%;
-  -webkit-transform: translate(-50%, 10px);
-          transform: translate(-50%, 10px);
-  text-align: center;
-}
-
-.hidden-popup {
-  text-align: center;
+  width: 90vw;
+  -webkit-transform: translate(-45vw, 2vh);
+          transform: translate(-45vw, 2vh);
 }
 
 .directions {
