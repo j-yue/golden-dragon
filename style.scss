@@ -1,6 +1,5 @@
 $main-font: 'Verdana', 'Century Gothic', 'Open Sans', sans-serif;
 $nav-font: 'Muli', 'Century Gothic', sans-serif;
-// $logo-font: bold 2rem 'Petit Formal Script', cursive;
 
 $font-size: 1.5rem;
 $header-size: 2rem;
@@ -36,7 +35,7 @@ $yelp-color: #d32323;
 
 
 html {
-    // font-size: 16px;
+    font-size: 1vw;
     scroll-behavior: smooth;
 }
 
@@ -209,6 +208,10 @@ header h2 {
 
 .menu .card {
     margin-bottom: $header-margin;
+}
+
+.menu-content > #meat .card {
+    max-width: 90vw;
 }
 
 .menu img {

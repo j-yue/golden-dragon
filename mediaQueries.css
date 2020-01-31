@@ -8,21 +8,6 @@
   }
 }
 
-@media screen and (min-width: 0px) {
-  html {
-    font-size: 10px;
-  }
-  .menu-content > #meat .card {
-    max-width: 90vw;
-  }
-}
-
-@media screen and (min-width: 375px) {
-  .restaurant {
-    font-size: 2rem;
-  }
-}
-
 @media screen and (min-width: 425px) {
   html {
     font-size: 10px;
