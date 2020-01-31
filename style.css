@@ -274,8 +274,16 @@ textarea {
   padding: 0;
 }
 
+.contact-details i {
+  padding-right: 1rem;
+}
+
 .hours-type {
   text-transform: uppercase;
+}
+
+.hours {
+  font-family: "Lora", "Georgia", serif;
 }
 
 .footer .col {
