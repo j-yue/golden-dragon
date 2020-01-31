@@ -17,7 +17,7 @@ $text-primary: #000;
 $text-secondary: #fff;
 $links-primary: #fff;
 $links-secondary: #ffca05;
-$bg-primary: #415B80;
+$bg-primary: #000;
 $buttons-primary: #ffca05;
 $theme-color: #ffca05;
 
@@ -233,7 +233,7 @@ header h2 {
     color: $theme-color;
     font-weight: bold;
     transition: $transition;
-    font-size: 1.5rem;
+    // font-size: 1.5rem;
 }
 
 .restaurant:hover {
