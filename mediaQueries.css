@@ -3,20 +3,11 @@
     background-size: 100vw auto;
     background-attachment: initial;
   }
-  .social-media a {
-    background: rgba(255, 255, 255, 0.5);
-  }
 }
 
 @media screen and (min-width: 425px) {
   html {
     font-size: 10px;
-  }
-}
-
-@media screen and (min-width: 500px) {
-  .menu-content > #meat .card {
-    max-width: 40vw;
   }
 }
 
@@ -47,12 +38,9 @@
     -webkit-box-direction: normal;
         -ms-flex-flow: row nowrap;
             flex-flow: row nowrap;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-  }
-  .menu-content > #meat .card {
-    max-width: 30vw;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 

@@ -1,5 +1,5 @@
 html {
-  font-size: 1vw;
+  font-size: 2vw;
   scroll-behavior: smooth;
 }
 
@@ -110,7 +110,7 @@ header h2 {
   color: #fff;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(128, 128, 128, 0.75);
   border-radius: 5px;
   border: 1px solid black;
   padding: 1rem;
@@ -154,6 +154,11 @@ header h2 {
   margin-top: 0.5rem;
 }
 
+.dish {
+  float: left;
+  width: 70%;
+}
+
 .price {
   float: right;
 }
@@ -166,8 +171,9 @@ header h2 {
   margin-bottom: 0.5rem;
 }
 
-.menu-content > #meat .card {
-  max-width: 90vw;
+.multi .card {
+  max-width: 45vw;
+  min-width: 45vw;
 }
 
 .menu img {

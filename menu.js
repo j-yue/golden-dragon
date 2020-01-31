@@ -210,7 +210,7 @@ const MENU_OBJ = {
 function renderCard(name) {
     let result = '';
     for (let dish of MENU[name]) {
-        result += `<li class="list-group-item">${dish[0]} <span class="price">${dish[1].toFixed(2)}</span></li>`
+        result += `<li class="list-group-item"><span class="dish">${dish[0]}</span><span class="price">${dish[1].toFixed(2)}</span></li>`
     }
     return result;
 }

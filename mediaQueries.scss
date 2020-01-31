@@ -5,21 +5,12 @@
         background-attachment: initial;
     }
 
-    .social-media a {
-        background: rgba(255, 255, 255, .5);
-    }
 }
 
 
 @media screen and (min-width: 425px) {
     html {
         font-size: 10px;
-    }
-}
-
-@media screen and (min-width: 500px) {
-    .menu-content > #meat .card {
-        max-width: 40vw;
     }
 }
 
@@ -45,11 +36,7 @@
     .navbar-collapse ul {
         display: flex;
         flex-flow: row nowrap;
-        justify-content: space-evenly;
-    }
-    
-    .menu-content > #meat .card {
-        max-width: 30vw;
+        justify-content: center;
     }
 }
 

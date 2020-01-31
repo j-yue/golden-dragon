@@ -35,7 +35,7 @@ $yelp-color: #d32323;
 
 
 html {
-    font-size: 1vw;
+    font-size: 2vw;
     scroll-behavior: smooth;
 }
 
@@ -151,7 +151,7 @@ header h2 {
 .social-media a {
     color: $links-primary;
     transition: $transition;
-    background: rgba(0,0,0, .5);
+    background: rgba(128, 128, 128, .75);
     border-radius: 5px;
     border: 1px solid black;
     padding: $sm-padding;
@@ -198,6 +198,12 @@ header h2 {
     margin-top: $header-margin;
 }
 
+.dish {
+    float: left;
+    width: 70%;
+}
+
+
 .price {
     float: right;
 }
@@ -210,8 +216,10 @@ header h2 {
     margin-bottom: $header-margin;
 }
 
-.menu-content > #meat .card {
-    max-width: 90vw;
+
+.multi .card {
+    max-width: 45vw;
+    min-width: 45vw;
 }
 
 .menu img {
