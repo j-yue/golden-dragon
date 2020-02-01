@@ -191,11 +191,17 @@ header h2 {
 }
 
 
-.card-title {
-    font-size: $font-size;
+.menu-card-title {
+    font-size: $header-size;
     text-align: center;
     font-weight: bold;
-    margin-top: $header-margin;
+    margin-bottom: 0;
+    // margin-top: $header-margin;
+    margin-top: 1rem;
+}
+
+.menu-card-content ul {
+    padding-top: 0;
 }
 
 .dish {
@@ -213,19 +219,24 @@ header h2 {
 }
 
 .menu .card {
-    margin-bottom: $header-margin;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    border-top: none;
+    border-left: none;
+    border-right: none;
 }
 
-
-.multi .card {
-    max-width: 45vw;
-    min-width: 45vw;
+.img-wrapper {
+    width: 30%;
 }
 
-.menu img {
-    height: 35vh;
+.menu-card-img {
+    width: 70%;
     object-fit: cover;
 }
+
 
 .dropdown-item {
     font-size: $font-size;

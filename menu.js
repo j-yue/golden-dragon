@@ -224,12 +224,15 @@ function renderMenu() {
             let id = dishes.toLowerCase().replace(' ', '-');
             let card = `
                 <section class="card">
-                <img src="images/menu/${id}.jpg" class="card-img-top" alt="image of ${dishes}">
-                <h4 class="card-title">${dishes}</h4>
+                <div class="img-wrapper d-flex flex-row flex-nowrap justify-content-center align-items-center">
+                <img src="images/menu/${id}.jpg" class="menu-card-img" alt="image of ${dishes}">
+                </div>
+                <div class="menu-card-content flex-grow-1">
+                <h4 class="card-title menu-card-title">${dishes}</h4>
                 <ul class="list-group list-group-flush card-body">
             `;
             card += renderCard(dishes);
-            card += '</ul></section>';
+            card += '</ul></div></section>';
             tab += card;
         });
         let result = document.querySelector(`#${type}`);
