@@ -306,12 +306,17 @@ textarea {
   padding-right: 1rem;
 }
 
+.contact-details li {
+  margin-bottom: 1rem;
+}
+
 .hours-type {
   text-transform: uppercase;
 }
 
 .hours {
-  font-family: "Lora", "Georgia", serif;
+  margin-bottom: 1rem;
+  letter-spacing: 1.5px;
 }
 
 .footer .col {
