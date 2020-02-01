@@ -270,8 +270,15 @@ header h2 {
 }
 
 .popup {
-    width: 90vw;
-    transform: translate(-45vw, 2vh);
+    width: 50vw;
+    height: 18rem;
+    transform: translate(-25vw, -20rem);
+}
+
+.close-popup {
+    margin-top: .5rem;
+    width: 15%;
+    margin-left: 85%;
 }
 
 
@@ -284,6 +291,14 @@ header h2 {
 
 .phone {
     color: $bg-primary;
+}
+
+.ol-attribution {
+    font-size: .75rem;
+}
+
+.ol-control button {
+    background: rgba(0,0,0, .5) !important;
 }
 
 //-----------------------CONTACT---------------------

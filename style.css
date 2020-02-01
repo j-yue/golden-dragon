@@ -221,9 +221,16 @@ header h2 {
 }
 
 .popup {
-  width: 90vw;
-  -webkit-transform: translate(-45vw, 2vh);
-          transform: translate(-45vw, 2vh);
+  width: 50vw;
+  height: 18rem;
+  -webkit-transform: translate(-25vw, -20rem);
+          transform: translate(-25vw, -20rem);
+}
+
+.close-popup {
+  margin-top: .5rem;
+  width: 15%;
+  margin-left: 85%;
 }
 
 .directions {
@@ -235,6 +242,14 @@ header h2 {
 
 .phone {
   color: #000;
+}
+
+.ol-attribution {
+  font-size: .75rem;
+}
+
+.ol-control button {
+  background: rgba(0, 0, 0, 0.5) !important;
 }
 
 .contact-btn {

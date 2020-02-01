@@ -3,6 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
     renderMenu();
 })
 
+document.querySelector('.close-popup').addEventListener('click', () => {
+    document.querySelector('.popup').style.display = "none";
+});
+
 
 let form = document.querySelector('.needs-validation');
 

@@ -197,11 +197,12 @@
 
 
                 <div id="popup" class="popup card text-center">
-                    <div class="card-body">
-                        <h5 class="card-title">Golden Dragon</h5>
+                    <div class="card-body d-flex flex-column flex-nowrap justify-content-center">
+                        <span class="close-popup"><button type="button" class="btn"><i class="fas fa-times"></i></button></span>
+                        <h5 class="card-title flex-grow-1">Golden Dragon</h5>
                         <address>960 N Broadway, Los Angeles, CA 90012</address>
-                        <a class="phone" href="tel://1-213-626-2039">+1 213 626 2039</a>
-                        <p><a class="directions btn btn-primary btn-lg"
+                        <a class="phone flex-grow-1" href="tel://1-213-626-2039">+1 213 626 2039</a>
+                        <p><a class="directions btn btn-primary btn-lg flex-grow-1"
                                 href="https://www.google.com/maps/dir//960+North+Broadway,+Los+Angeles,+CA/@34.0655814,-118.2712809,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x80c2c6594381d68d:0x7ec964a5d87f8fb3!2m2!1d-118.2362614!2d34.0655153!3e0"
                                 target="_blank">Get Directions</a></p>
                     </div>
@@ -340,6 +341,7 @@
 
     </main>
 
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList"></script>
     <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.1.1/build/ol.js"></script>
     <script src="loader.js"></script>
     <script src="map.js"></script>
