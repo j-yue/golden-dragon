@@ -34,6 +34,10 @@ main {
   z-index: 500;
 }
 
+*[x-apple-data-detectors] {
+  color: inherit !important;
+}
+
 #main-nav {
   -webkit-transition: 0.3s;
   transition: 0.3s;

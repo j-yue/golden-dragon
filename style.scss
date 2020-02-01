@@ -72,6 +72,11 @@ main {
 }
 
 
+//override ios style for phone numbers
+*[x-apple-data-detectors] {
+    color: inherit !important;
+}
+
 
 //-----------------------MAIN NAVBAR---------------------
 #main-nav {
