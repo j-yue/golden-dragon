@@ -254,6 +254,11 @@ header h2 {
   margin-left: 85%;
 }
 
+.map-name {
+  font-weight: bold;
+  font-size: inherit;
+}
+
 .directions {
   background: #ffca05 !important;
   border: none !important;
