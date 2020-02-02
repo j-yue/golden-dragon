@@ -225,7 +225,7 @@ function renderMenu() {
             let card = `
                 <section class="card">
                 <div class="img-wrapper d-flex flex-row flex-nowrap justify-content-center align-items-center">
-                <img src="images/menu/${id}.jpg" class="menu-card-img" alt="image of ${dishes}">
+                <img src="images/menu/${id}.webp" class="menu-card-img" alt="image of ${dishes}">
                 </div>
                 <div class="menu-card-content flex-grow-1">
                 <h4 class="card-title menu-card-title">${dishes}</h4>
