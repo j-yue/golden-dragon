@@ -10,26 +10,11 @@ body {
   height: 100%;
   font-family: "Verdana", "Century Gothic", "Open Sans", sans-serif !important;
   font-size: 1.5rem !important;
-  overflow: hidden;
-}
-
-.preloader {
-  width: 100%;
-  height: 100vh;
-  opacity: 0;
-  -webkit-transition: .8s;
-  transition: .8s;
-  position: fixed;
-  z-index: 1000;
-  background: #ffca05 center url("images/logo/cover.png");
-  background-size: 100%;
-  background-repeat: no-repeat;
 }
 
 main {
-  opacity: 0;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: .1s;
+  transition: .1s;
   position: absolute;
   z-index: 500;
 }
@@ -73,9 +58,16 @@ header h2 {
 }
 
 .home {
-  background: #000 center url("images/hero.jpg");
-  background-attachment: fixed;
+  background: #000 center url("images/placeholder.webp");
   color: #fff;
+  background-size: cover;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.replace-placeholder {
+  background: #000 center url("images/hero.webp");
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
 }

@@ -1,8 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-    createMap();
-    renderMenu();
-})
-
 document.querySelector('.close-popup').addEventListener('click', () => {
     document.querySelector('.popup').style.display = "none";
 });
