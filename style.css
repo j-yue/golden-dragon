@@ -60,13 +60,8 @@ header h2 {
 .home {
   background: #000 center url("images/placeholder.webp");
   color: #fff;
-  background-repeat: no-repeat;
-  background-size: cover;
   -webkit-transition: .5s;
   transition: .5s;
-}
-
-.replace-placeholder, .replace-placeholder-ios {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -74,10 +69,16 @@ header h2 {
 
 .replace-placeholder-ios {
   background: #000 center url("images/hero.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .replace-placeholder {
   background: #000 center url("images/hero.webp");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .home .content {

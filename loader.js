@@ -29,7 +29,7 @@ document.onreadystatechange = () => {
         
         if (isIOS) {
 
-            document.querySelector('#home').style.background = '#000 center url('images/placeholder.jpg')';
+            document.querySelector('#home').style.background = '#000 center url(images/placeholder.jpg)';
             document.querySelector ('.about-img').src = 'images/placeholder-front.jpg';
 
         }
