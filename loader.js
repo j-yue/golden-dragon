@@ -23,6 +23,17 @@ document.onreadystatechange = () => {
             form.classList.add('was-validated');
         });
 
+        // webp images unsupported on ios, load jpg images instead
+        let isIOS = /iPad|iPhone|iPod/.test(navigator.platform)
+            || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+        
+        if (isIOS) {
+
+            document.querySelector('#home').style.background = '#000 center url('images/placeholder.jpg')';
+            document.querySelector ('.about-img').src = 'images/placeholder-front.jpg';
+
+        }
+
         if ("IntersectionObserver" in window) {
 
             const menu = document.querySelector('#menu');
@@ -40,12 +51,14 @@ document.onreadystatechange = () => {
                 });
             }
 
-            var replaceBg = () => {
-                home.classList.add('replace-placeholder');
+            var replaceBg = (isIOS) => {
+                let sys = isIOS ? 'replace-placeholder-ios' : 'replace-placeholder';
+                home.classList.add(sys);
             }
 
-            var replaceFront = () => {
-                document.querySelector('.about-img').src = 'images/front.webp';
+            var replaceFront = (isIOS) => {
+                let format = isIOS ? 'jpg' : 'webp';
+                document.querySelector('.about-img').src = `images/front.${format}`;
             }
 
             let options = {
@@ -59,10 +72,10 @@ document.onreadystatechange = () => {
                 threshold: .5
             }
 
-            let menuObs = new IntersectionObserver(loadTarget(renderMenu, 2000), options);
+            let menuObs = new IntersectionObserver(loadTarget(renderMenu(isIOS), 2000), options);
             let mapObs = new IntersectionObserver(loadTarget(createMap, 3000), mapOptions);
-            let homeObs = new IntersectionObserver(loadTarget(replaceBg, 1500), options);
-            let aboutObs = new IntersectionObserver(loadTarget(replaceFront, 1000), options);
+            let homeObs = new IntersectionObserver(loadTarget(replaceBg(isIOS), 1500), options);
+            let aboutObs = new IntersectionObserver(loadTarget(replaceFront(isIOS), 1000), options);
 
             menuObs.observe(menu);
             mapObs.observe(map);
@@ -72,13 +85,13 @@ document.onreadystatechange = () => {
         } else {
 
             setTimeout(() => {
-                replaceBg();
+                replaceBg(isIOS);
             }, 2000);
 
             setTimeout(() => {
                 createMap();
-                renderMenu();
-                replaceFront();
+                renderMenu(isIOS);
+                replaceFront(isIOS);
             }, 3000);
 
         }

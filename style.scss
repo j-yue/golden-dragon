@@ -119,21 +119,26 @@ header h2 {
 
 //-----------------------HOME---------------------
 .home {
-    // background: #000 center url('images/hero.webp');
     background: #000 center url('images/placeholder.webp');
     // background-attachment: fixed;
     color: $home-color;
-    // background-repeat: no-repeat;
+    background-repeat: no-repeat;
     background-size: cover;
     transition: .5s;
 }
 
-.replace-placeholder {
-    background: #000 center url('images/hero.webp');
+.replace-placeholder, .replace-placeholder-ios {
     background-attachment: fixed;
-    // color: $home-color;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.replace-placeholder-ios {
+    background: #000 center url('images/hero.jpg');
+}
+
+.replace-placeholder {
+    background: #000 center url('images/hero.webp');
 }
 
 .home .content {
