@@ -1,84 +1,86 @@
-
-
-
-
-// window.addEventListener('load', () => {
-//     const preloader = document.querySelector('.preloader');
-
-//     preloader.setAttribute('style', 'opacity: 1');
-//     setTimeout(() => {
-//         document.querySelector('main').setAttribute('style', 'opacity: 1');
-
-//     }, 500);
-
-//     setTimeout(() => {
-//         preloader.setAttribute('style', 'opacity: 0;');
-//         document.querySelector('body').setAttribute('style', 'overflow-y: visible');
-//     }, 1700);
-
-//     setTimeout(() => {
-//         preloader.setAttribute('style', 'display: none;');
-//     }, 2000);
-// });
-
 document.onreadystatechange = () => {
+
     let state = document.readyState;
-    //     let loader = document.querySelector('.preloader');
-    //     let main = document.querySelector('main');
 
     if (state == 'loading') {
 
     }
 
     else if (state == 'interactive') {
-        
+
     }
 
     else if (state == 'complete') {
 
+        //event listener for contact form
+        let form = document.querySelector('.needs-validation');
+
+        form.addEventListener('submit', (ev) => {
+            ev.preventDefault();
+            if (form.checkValidity()) {
+                document.querySelector('.message-sent').classList.remove('hide-message');
+            }
+            form.classList.add('was-validated');
+        });
+
         if ("IntersectionObserver" in window) {
 
-                const menu = document.querySelector('#menu');
-                const map = document.querySelector('#map');
-                const home = document.querySelector('#home');
-                const about = document.querySelector('#about');
+            const menu = document.querySelector('#menu');
+            const map = document.querySelector('#map');
+            const home = document.querySelector('#home');
+            const about = document.querySelector('#about');
 
-                let loadTarget = callback => entries => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) callback();
-                    });
-                }
+            let loadTarget = (callback, time) => entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            callback();
+                        }, time);
+                    }
+                });
+            }
 
-                var replaceBg = () => {
-                    setTimeout(() => home.classList.add('replace-placeholder'), 1500);
-                }
+            var replaceBg = () => {
+                home.classList.add('replace-placeholder');
+            }
 
-                var replaceFront = () => {
-                    document.querySelector('.about-img').src = 'images/front.webp';
-                }
+            var replaceFront = () => {
+                document.querySelector('.about-img').src = 'images/front.webp';
+            }
 
-                let options = {
-                    root: null,
-                    threshold: .5
-                };
+            let options = {
+                root: null,
+                threshold: .5
+            };
 
-                let menuObs = new IntersectionObserver(loadTarget(renderMenu), options);
-                let mapObs = new IntersectionObserver(loadTarget(createMap), options);
-                let homeObs = new IntersectionObserver(loadTarget(replaceBg), options);
-                let aboutObs = new IntersectionObserver(loadTarget(replaceFront), options);
+            let mapOptions = {
+                root: document.querySelector('#location'),
+                rootMargin: '10%',
+                threshold: .5
+            }
 
-                menuObs.observe(menu);
-                mapObs.observe(map);
-                homeObs.observe(home);
-                aboutObs.observe(about);
+            let menuObs = new IntersectionObserver(loadTarget(renderMenu, 2000), options);
+            let mapObs = new IntersectionObserver(loadTarget(createMap, 3000), mapOptions);
+            let homeObs = new IntersectionObserver(loadTarget(replaceBg, 1500), options);
+            let aboutObs = new IntersectionObserver(loadTarget(replaceFront, 1000), options);
+
+            menuObs.observe(menu);
+            mapObs.observe(map);
+            homeObs.observe(home);
+            aboutObs.observe(about);
 
         } else {
+
+            setTimeout(() => {
+                replaceBg();
+            }, 2000);
+
             setTimeout(() => {
                 createMap();
                 renderMenu();
                 replaceFront();
             }, 3000);
-            replaceBg();
+
         }
 
     }

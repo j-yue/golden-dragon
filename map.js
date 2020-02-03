@@ -40,6 +40,8 @@ const createMap = () => {
         interactions: ol.interaction.defaults().extend([
             new ol.interaction.DragAndDrop
         ]),
+        loadTilesWhileAnimating: true,
+        loadTilesWhileInteracting: true,
         view: new ol.View({
             center: ol.proj.fromLonLat([lon, lat]),
             zoom: 16
@@ -48,6 +50,11 @@ const createMap = () => {
 
     popup.setPosition(ol.proj.fromLonLat([lon, lat]));
 
+    
+    //while map is being created, add event listener here and not in separate file
+    document.querySelector('.close-popup').addEventListener('click', () => {
+        document.querySelector('.popup').style.display = "none";
+    });
 
 };
 
