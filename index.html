@@ -51,9 +51,9 @@
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaQueries.css">
-    <!-- <link rel="stylesheet" href="bootstrap.min.css"> -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.1.1/css/ol.css" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"
@@ -71,8 +71,8 @@
 
         <nav id="main-nav" class="navbar fixed-top navbar-expand-lg navbar-dark">
 
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                data-target=".navbar-collapse">
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target=".navbar-collapse" aria-label="toggler for navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -128,12 +128,12 @@
                 </div>
 
                 <section class="social-media w-75 mx-auto d-flex justify-content-between">
-                    <a href="https://www.yelp.com/biz/golden-dragon-restaurant-los-angeles" target="_blank" rel="noopener"><i
+                    <a href="https://www.yelp.com/biz/golden-dragon-restaurant-los-angeles" target="_blank" rel="noopener" aria-label="go to yelp"><i
                             class="fab fa-yelp fa-2x"></i></a>
                     <a href="https://www.tripadvisor.com/Restaurant_Review-g32655-d1382260-Reviews-Golden_Dragon_Restaurant-Los_Angeles_California.html"
-                        target="_blank" rel="noopener"><i class="fab fa-tripadvisor fa-2x"></i></a>
+                        target="_blank" rel="noopener" aria-label="tripadvisor"><i class="fab fa-tripadvisor fa-2x"></i></a>
                     <a href="https://www.facebook.com/pages/Golden-Dragon-Chinese-Restaurant/200639156617298"
-                        target="_blank" rel="noopener"><i class="fab fa-facebook-f fa-2x"></i></a>
+                        target="_blank" rel="noopener" aria-label="facebook"><i class="fab fa-facebook-f fa-2x"></i></a>
                 </section>
             </section>
 
@@ -148,11 +148,10 @@
             </header>
 
             <ul class="nav justify-content-center nav-pills" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link" href="#appetizers" data-toggle="pill" role="tab" aria-controls="apps"
-                        aria-selected="true">Apps</a>
+                <li class="nav-item" role="tab">
+                    <a class="nav-link" href="#appetizers" data-toggle="pill">Apps</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown" aria-label="dropdown selection of main courses">
                     <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button"
                         aria-haspopup="true" aria-expanded="false">Mains</a>
 
@@ -168,11 +167,11 @@
                     </div>
 
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" role="tab">
                     <a class="nav-link" href="#desserts" data-toggle="pill" role="tab" aria-controls="desserts"
                         aria-selected="false">Desserts</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" role="tab">
                     <a class="nav-link" href="#drinks" data-toggle="pill" role="tab" aria-controls="drinks"
                         aria-selected="false">Drinks</a>
                 </li>
@@ -191,7 +190,7 @@
                 <section id="drinks" class="tab-pane fade`" role="tabpanel" aria-labelledby="drinks-tab">
                 </section>
 
-                <section id="meat" class="multi tab-pane fade show active" role="tabpanel" aria-labelledby="meat-tab">
+                <section id="meat" class="multi tab-pane fade show active" role="tabpanel" aria-label="meat tab">
                 </section>
                 <section id="noodles" class="tab-pane fade`" role="tabpanel" aria-labelledby="noodles-tab"></section>
                 <section id="rice" class="tab-pane fade`" role="tabpanel" aria-labelledby="rice-tab"></section>
@@ -219,8 +218,11 @@
 
                 <div id="popup" class="popup card text-center">
                     <div class="card-body d-flex flex-column flex-nowrap justify-content-center">
-                        <span class="close-popup"><button type="button" class="btn"><i
-                                    class="fas fa-times"></i></button></span>
+                        <span class="close-popup">
+                            <button type="button" class="btn" aria-label="button to close popup in map">
+                                <i class="fas fa-times"></i>
+                                </button>
+                            </span>
                         <h5 class="map-name card-title flex-grow-1">Golden Dragon</h5>
                         <address>960 N Broadway, Los Angeles, CA 90012</address>
                         <a class="phone flex-grow-1" href="tel://1-213-626-2039">+1 213 626 2039</a>
@@ -376,12 +378,14 @@
     <script defer src="map.js"></script>
     <script defer src="menu.js"></script>
     <script defer src="loader.js"></script>
-    <!-- <script>
+    <script>
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('./service-worker.js');
-        };
-    </script> -->
-    <!-- <script src="service-worker.js"></script> -->
+            navigator.serviceWorker
+            .register('./service-worker.js')
+            .then(() => console.log('service worker registered'));
+        }
+    </script>
+    <script src="service-worker.js"></script>
     <script defer src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
