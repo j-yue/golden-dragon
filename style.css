@@ -69,10 +69,8 @@ header h2 {
 
 .replace-placeholder-ios {
   background: #000 center url("images/hero.jpg");
-  background-attachment: fixed;
-  background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: initial;
+  background-attachment: initial !important;
 }
 
 .replace-placeholder {
