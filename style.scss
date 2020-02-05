@@ -75,7 +75,7 @@ main {
     z-index: 500;
 }
 
-//testing 
+//lazy load these 
 .about, .footer, .location, .contact {
     display: none;
 }
@@ -151,7 +151,6 @@ header h2 {
 
 .replace-placeholder-ios {
     background: #000 center url('images/hero.jpg');
-    // @include homeBgStyle();
     background-size: cover;
     background-attachment: initial !important;
 }
