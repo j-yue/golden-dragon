@@ -41,13 +41,13 @@ var format = isIOS ? '.jpg' : '.webp';
 
 var files = [
   'index.html',
-  'menu.js',
+  'menu-min.js',
   'loader.js',
-  'map.js',
-  'style.css',
+  'map-min.js',
+  'style-min.css',
   'images/logo/favicon.ico',
   'bootstrap.min.css',
-  'mediaQueries.css'
+  'mediaQueries-min.css'
 ];
 
 var filesToCache = files.concat(menu.map(dish => 'images/menu/' + dish + format)).concat(images.map(pic => 'images/' + pic + format));
