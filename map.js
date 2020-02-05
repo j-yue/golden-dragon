@@ -25,9 +25,10 @@ const createMap = () => {
         target: 'map',
         layers: [
             new ol.layer.Tile({
-                source: new ol.source.OSM({
-                    url: 'http://{a-c}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png'
-                })
+                // source: new ol.source.OSM({
+                //     url: 'http://{a-c}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png'
+                // })
+                source: new ol.source.OSM()
             }),
             markerLayer
         ],
