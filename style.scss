@@ -115,6 +115,7 @@ header h2 {
 .replace-placeholder-ios {
     background: #000 center url('images/hero.jpg');
     @include homeBgStyle();
+    background-attachment: initial;
 }
 
 .replace-placeholder {

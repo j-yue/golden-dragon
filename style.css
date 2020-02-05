@@ -72,6 +72,7 @@ header h2 {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: initial;
 }
 
 .replace-placeholder {
