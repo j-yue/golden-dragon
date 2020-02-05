@@ -1,3 +1,5 @@
+
+//list of dishes and their prices on the menu
 const MENU = {
     "Appetizers": [
         ["Fried Wonton (10pcs)", 5.50],
@@ -177,7 +179,8 @@ const MENU = {
 };
 
 
-
+//dishes grouped by ingredients
+//each subgroup will be represented by a bootstrap card
 const MEAT = ['Chicken', 'Pork', 'Beef', 'Duck', 'Squab'];
 const NOODLES = ['Noodle Soup', 'Noodles'];
 const SEAFOOD = ['Shrimp', 'Clams', 'Scallop', 'Oyster', 'Fish', 'Squid'];
@@ -188,11 +191,9 @@ const VEGETABLE = ['Vegetable'];
 const SPECIALS = ['Sizzling Plates', 'Hot Pot'];
 const DRINKS = ['Drinks'];
 const DESSERTS = ['Desserts'];
-
-
-
 const APPETIZERS = ['Appetizers'];
 
+//can't use directly use variable name, so map it to string equivalent
 const MENU_OBJ = {
     soup: SOUP,
     noodles: NOODLES,
@@ -207,6 +208,8 @@ const MENU_OBJ = {
     drinks: DRINKS
 };
 
+//helper function for renderMenu
+//returns list item with bootstrap classes containing name of dish and its price
 function renderCard(name) {
     let result = '';
     for (let dish of MENU[name]) {
@@ -216,7 +219,7 @@ function renderCard(name) {
 }
 
 
-
+//for each group in MENU_OBJ, create a tab containing cards for each of its member and insert it into the document
 function renderMenu(isIOS) {
     for (let type in MENU_OBJ) {
         let tab = '';

@@ -1,3 +1,18 @@
+/*
+  Table of Contents
+1. hover: none and pointer: coarse (not on desktop)
+2. min-width: 425px
+3. min-width: 575px
+4. min-width: 768px
+5. min-width: 992px
+6. min-width: 1024px
+
+Notes 
+- mainly focused on setting root font size on smaller screens to avoid overflow from large text
+- fixed bg attachment is unsupported on mobile, so need to set it to initial
+- larger screens have typography linked to viewport width size
+*/
+
 @media (hover: none) and (pointer: coarse) {
   .home {
     background-size: 100vw auto;

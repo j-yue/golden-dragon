@@ -1,3 +1,15 @@
+/*
+    Table of Contents
+1. variables, mixins
+2. each section and header
+3. main navbar
+4. home
+5. menu
+6. about
+7. location
+8. contact
+9. footer
+*/
 html {
   font-size: 2vw;
   scroll-behavior: smooth;
@@ -17,6 +29,18 @@ main {
   transition: .1s;
   position: absolute;
   z-index: 500;
+}
+
+main > article {
+  min-height: 100vh;
+  width: 100%;
+  padding: 10vh 1.5rem;
+}
+
+header h2 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
 }
 
 *[x-apple-data-detectors] {

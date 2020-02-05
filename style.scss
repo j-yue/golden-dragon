@@ -1,3 +1,17 @@
+/*
+    Table of Contents
+1. variables, mixins
+2. each section and header
+3. main navbar
+4. home
+5. menu
+6. about
+7. location
+8. contact
+9. footer
+*/
+
+
 $main-font: 'Verdana', 'Century Gothic', 'Open Sans', sans-serif;
 $nav-font: 'Muli', 'Century Gothic', sans-serif;
 
@@ -60,6 +74,20 @@ main {
     position: absolute;
     z-index: 500;
 }
+
+//-----------------------EACH SECTION AND HEADER---------------------
+main > article {
+    min-height: 100vh;
+    width: 100%;
+    padding: 10vh $main-padding;
+}
+
+header h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: $header-size;
+}
+
 
 
 //override ios style for phone numbers
