@@ -1,3 +1,11 @@
+
+/**
+ * reduce main thread work with lazy load
+ * lazy load approach: 
+ * hide everything except main nav, home, and container for menu
+ * then load the rest of the page as user scrolls away from home
+ * ...except when clicking/using main nav - force load the rest of the page to be visible
+ */
 document.onreadystatechange = () => {
 
     let state = document.readyState;
@@ -12,86 +20,98 @@ document.onreadystatechange = () => {
 
     else if (state == 'complete') {
 
-        //event listener for contact form
-        let form = document.querySelector('.needs-validation');
+        // event listener for contact form
+        var formListener = () => {
+            let form = document.querySelector('.needs-validation');
 
-        form.addEventListener('submit', (ev) => {
-            ev.preventDefault();
-            if (form.checkValidity()) {
-                document.querySelector('.message-sent').classList.remove('hide-message');
-            }
-            form.classList.add('was-validated');
-        });
+            form.addEventListener('submit', (ev) => {
+                ev.preventDefault();
+                if (form.checkValidity()) {
+                    document.querySelector('.message-sent').classList.remove('hide-message');
+                }
+                form.classList.add('was-validated');
+            });
+        }
 
         // webp images unsupported on ios, load jpg images instead
         let isIOS = /iPad|iPhone|iPod/.test(navigator.platform)
             || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-        
+
         if (isIOS) {
-
             document.querySelector('#home').style.background = '#000 center url(images/placeholder.jpg)';
-            document.querySelector ('.about-img').src = 'images/placeholder-front.jpg';
-
+            document.querySelector('.about-img').src = 'images/placeholder-front.jpg';
         }
+
+        
+        var replaceBg = (isIOS) => {
+            let sys = isIOS ? 'replace-placeholder-ios' : 'replace-placeholder';
+            home.classList.add(sys);
+        }
+
+        var replaceFront = (isIOS) => {
+            let format = isIOS ? 'jpg' : 'webp';
+            document.querySelector('.about-img').src = `images/front.${format}`;
+        }
+
+        var showSec = () => {
+            ['.location', '.about', '.contact', '.footer'].map(sec => document.querySelector(sec).classList.add('show-section'));
+        }
+
+        //border case where user uses main nav when some sections not visible
+        document.querySelector('#main-nav').addEventListener('click', () => {
+            showSec();
+        });
 
         if ("IntersectionObserver" in window) {
 
-            const menu = document.querySelector('#menu');
-            const map = document.querySelector('#map');
-            const home = document.querySelector('#home');
-            const about = document.querySelector('#about');
-
-            let loadTarget = (callback, time) => entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        setTimeout(() => {
-                            callback();
-                        }, time);
-                    }
-                });
-            }
-
-            var replaceBg = (isIOS) => {
-                let sys = isIOS ? 'replace-placeholder-ios' : 'replace-placeholder';
-                home.classList.add(sys);
-            }
-
-            var replaceFront = (isIOS) => {
-                let format = isIOS ? 'jpg' : 'webp';
-                document.querySelector('.about-img').src = `images/front.${format}`;
-            }
-
-            let options = {
+            let view = {
                 root: null,
                 threshold: .5
             };
 
-            let mapOptions = {
-                root: document.querySelector('#location'),
-                rootMargin: '10%',
-                threshold: .5
+            const menu = document.querySelector('.menu');
+            let loadMenu = entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        renderMenu();
+                    }
+                });
             }
 
-            let menuObs = new IntersectionObserver(loadTarget(renderMenu(isIOS), 2000), options);
-            let mapObs = new IntersectionObserver(loadTarget(createMap, 3000), mapOptions);
-            let homeObs = new IntersectionObserver(loadTarget(replaceBg(isIOS), 1500), options);
-            let aboutObs = new IntersectionObserver(loadTarget(replaceFront(isIOS), 1000), options);
-
+            const menuObs = new IntersectionObserver(loadMenu, view);
             menuObs.observe(menu);
-            mapObs.observe(map);
+
+            const home = document.querySelector('.home');
+            let checkHome = entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        replaceBg(isIOS);
+                    } else {
+                        showSec();
+                        createMap();
+                        replaceFront(isIOS);
+                        formListener();
+                    }
+
+                })
+            }
+
+            const homeObs = new IntersectionObserver(checkHome, view);
             homeObs.observe(home);
-            aboutObs.observe(about);
 
         } else {
 
+            //in case intersection observer unsupported
             setTimeout(() => {
                 replaceBg(isIOS);
             }, 2000);
 
             setTimeout(() => {
+                showSec();
                 createMap();
                 renderMenu(isIOS);
                 replaceFront(isIOS);
+                formListener();
             }, 3000);
 
         }

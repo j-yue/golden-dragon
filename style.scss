@@ -75,6 +75,15 @@ main {
     z-index: 500;
 }
 
+//testing 
+.about, .footer, .location, .contact {
+    display: none;
+}
+
+.show-section {
+    display: block !important;
+}
+
 //-----------------------EACH SECTION AND HEADER---------------------
 main > article {
     min-height: 100vh;
