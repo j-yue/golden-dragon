@@ -1,6 +1,8 @@
 //creates an OpenLayers map with a popup containing the restaurant name, number, and button to get directions
 //map is centered on the restaurant
 const createMap = () => {
+
+    // document.querySelector('.ol-viewport').remove();
     let [lon, lat] = [-118.236214, 34.065498];
 
 
@@ -27,7 +29,9 @@ const createMap = () => {
         target: 'map',
         layers: [
             new ol.layer.Tile({
-                source: new ol.source.OSM()
+                source: new ol.source.OSM({
+                    url: 'https://{a-c}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png'
+                })
             }),
             markerLayer
         ],
@@ -37,9 +41,11 @@ const createMap = () => {
             new ol.control.FullScreen
         ],
         overlays: [popup],
-        interactions: ol.interaction.defaults().extend([
-            new ol.interaction.DragAndDrop
-        ]),
+        // interactions: ol.interaction.defaults().extend([
+        //     new ol.interaction.DragAndDrop
+        // ]),
+        interactions: [],
+        // controls: [],
         loadTilesWhileAnimating: true,
         loadTilesWhileInteracting: true,
         view: new ol.View({

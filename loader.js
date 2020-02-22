@@ -88,6 +88,7 @@ document.onreadystatechange = () => {
                         replaceBg(isIOS);
                     } else {
                         showSec();
+                        document.querySelector('.ol-viewport').remove();
                         createMap();
                         replaceFront(isIOS);
                         formListener();
@@ -108,6 +109,7 @@ document.onreadystatechange = () => {
 
             setTimeout(() => {
                 showSec();
+                document.querySelector('.ol-viewport').remove();
                 createMap();
                 renderMenu(isIOS);
                 replaceFront(isIOS);
