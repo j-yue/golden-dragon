@@ -2,7 +2,6 @@
 //map is centered on the restaurant
 const createMap = () => {
 
-    // document.querySelector('.ol-viewport').remove();
     let [lon, lat] = [-118.236214, 34.065498];
 
 
