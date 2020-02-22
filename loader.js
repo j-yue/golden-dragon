@@ -44,9 +44,8 @@ document.onreadystatechange = () => {
 
         
         var replaceBg = (isIOS) => {
-            let sys = isIOS ? 'replace-placeholder-ios' : 'replace-placeholder';
-            home.classList.add(sys);
-            // document.querySelector('#home').classList.add(sys);
+            let format = isIOS ? 'jpg' : 'webp';
+            document.querySelector('#home').style.background = `#000 center url(images/hero.${format})`;
         }
 
         var replaceFront = (isIOS) => {
@@ -74,7 +73,7 @@ document.onreadystatechange = () => {
             let loadMenu = entries => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        renderMenu();
+                        renderMenu(isIOS);
                     }
                 });
             }
@@ -82,7 +81,6 @@ document.onreadystatechange = () => {
             const menuObs = new IntersectionObserver(loadMenu, view);
             menuObs.observe(menu);
 
-            const home = document.querySelector('.home');
             let checkHome = entries => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -90,7 +88,7 @@ document.onreadystatechange = () => {
                     } else {
                         showSec();
                         document.querySelector('.ol-viewport').remove();
-                        createMap();
+                        if (document.querySelectorAll('.ol-viewport').length < 1) createMap();
                         replaceFront(isIOS);
                         formListener();
                     }
@@ -110,7 +108,6 @@ document.onreadystatechange = () => {
 
             setTimeout(() => {
                 showSec();
-                document.querySelector('.ol-viewport').remove();
                 createMap();
                 renderMenu(isIOS);
                 replaceFront(isIOS);
