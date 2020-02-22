@@ -96,20 +96,7 @@ header h2 {
   transition: .5s;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.replace-placeholder-ios {
-  background: #000 center url("images/front.jpg");
-  background-size: cover;
-  background-attachment: initial !important;
-}
-
-.replace-placeholder {
-  background: #000 center url("images/hero.webp");
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover !important;
 }
 
 .home .content {

@@ -50,7 +50,7 @@ $yelp-color: #d32323;
 @mixin homeBgStyle {
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover !important;
 }
 
 
@@ -147,18 +147,23 @@ header h2 {
     color: $home-color;
     transition: .5s;
     @include homeBgStyle();
+    // background-size: cover;
+    // -webkit-background-size: cover;
+    // -moz-background-size: cover;
+    // -o-background-size: cover;
+    // background-size: fit;
 }
 
-.replace-placeholder-ios {
-    background: #000 center url('images/front.jpg');
-    background-size: cover;
-    background-attachment: initial !important;
-}
+// .replace-placeholder-ios {
+//     background: #000 center url('images/front.jpg');
+//     background-size: cover;
+//     background-attachment: initial !important;
+// }
 
-.replace-placeholder {
-    background: #000 center url('images/hero.webp');
-    @include homeBgStyle();
-}
+// .replace-placeholder {
+//     background: #000 center url('images/hero.webp');
+//     @include homeBgStyle();
+// }
 
 .home .content {
     min-height: 80vh;

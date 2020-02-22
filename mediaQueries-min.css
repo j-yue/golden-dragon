@@ -1,1 +1,52 @@
-@media (hover:none) and (pointer:coarse){.home{background-size:100vw auto;background-attachment:initial}}@media screen and (min-width:425px){html{font-size:10px}}@media screen and (min-width:575px){.footer .container .row{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row nowrap;flex-flow:row nowrap}}@media screen and (min-width:768px){html{font-size:12px}}@media screen and (min-width:992px){#main-nav{overflow:hidden}.navbar-collapse ul{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-webkit-box-pack:space-evenly;-ms-flex-pack:space-evenly;justify-content:space-evenly}}@media screen and (min-width:1024px){html{font-size:1vw}}
+@media (hover: none) and (pointer: coarse) {
+  .home {
+    background-size: 100vw auto;
+    background-attachment: initial;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media screen and (min-width: 575px) {
+  .footer .container .row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #main-nav {
+    overflow: hidden;
+  }
+  .navbar-collapse ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 1vw;
+  }
+}
+/*# sourceMappingURL=mediaQueries-min.css.map */
