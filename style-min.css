@@ -88,7 +88,7 @@ header h2 {
 }
 
 .replace-placeholder-ios {
-  background: #000 center url("images/hero.jpg");
+  background: #000 center url("images/front.jpg");
   background-size: cover;
   background-attachment: initial !important;
 }
