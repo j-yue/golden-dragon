@@ -87,7 +87,6 @@ document.onreadystatechange = () => {
                         replaceBg(isIOS);
                     } else {
                         showSec();
-                        document.querySelector('.ol-viewport').remove();
                         if (document.querySelectorAll('.ol-viewport').length < 1) createMap();
                         replaceFront(isIOS);
                         formListener();
